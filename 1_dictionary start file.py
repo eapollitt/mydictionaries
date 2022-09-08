@@ -11,7 +11,23 @@ print('*****  start section 1 - print dictionary ********')
 print()
 
 
+print(phonebook)
+print(type(phonebook)) #type allows you to know what kind of object you're dealing with 
+phone = phonebook['Chris'] #if you just did Chri you would get a key error (means that key does not exist in the dictionary)
+print(phone)
+#print(phonebook['Chris'])
+#dictionaries can be a collection of lists and list can be a collection of dictionaries
+#dictionaries need a key and list needs index value
+#chris is the key and the value is the phone number 
 
+#mydictionary = {} #dictionary exists its just empty 
+
+#print(mydictionary)
+
+
+mydictionary = dict(m=8, n=9) #another way to create a dictionary 
+print(mydictionary)
+#m is key 8 is a value 
 
 
 print()
@@ -19,7 +35,7 @@ print('*****  end section 1 ********')
 print()
 
 
-'''
+
 
 
 print()
@@ -28,7 +44,13 @@ print()
 
 
 
+name = 'Chris' #name = 'Chri'
 
+if name in phonebook: 
+    print(phonebook[name])
+
+else: 
+    print(name, "is not in the phonebook")
 
 
 
@@ -46,6 +68,14 @@ print()
 print('*****  start section 3 - edit/append dictionary ********')
 print()
 
+print(phonebook)
+phonebook['Chris'] = '555-0123'
+phonebook['Joe'] = '555-4444'
+print(phonebook)
+
+#keys cannot be updated only values 
+#if the key does not exist it adds a new value pair 
+#keys are immutable - cannot change them 
 
 
 
@@ -64,7 +94,8 @@ print('*****  start section 4 - delete/remove from dictionary ********')
 print()
 
 
-
+#del phonebook['Chris'] #removve a key value pair 
+#print(phonebook)
 
 print()
 print('*****  end section 4 ********')
@@ -79,7 +110,18 @@ print()
 print('*****  start section 5 - iterate through keys, values, items ********')
 print()
 
+for key in phonebook: #the default iteration for dictionaries is the keys for a forloop can do phonebook.keys method but dont have to use it bc its the default
+    print(key) #key is just a variable word 
+    print(phonebook[key]) #prints phone number
 
+for value in phonebook.values(): #get all the phone numbers 
+    print(value)
+
+for k,v in phonebook.items(): #items method goes through keys and values at the same time 
+    print("key: ",k, "value:" ,v) #tuple is returned
+
+for tuple in phonebook.items(): #immutable and can't access them directly 
+    print(tuple)
 
 
 
@@ -96,7 +138,11 @@ print()
 print('*****  start section 6 - using get and clear ********')
 print()
 
+phone = phonebook.get("Chris", "key not found") #optional argument if it doesn't find a match
+print(phone)
 
+#phonebook.clear()
+#print(phonebook) #doesn't delete dictionary just clears out all the values 
 
 
 
@@ -105,7 +151,7 @@ print()
 print('*****  end section 6 ********')
 print()
 
-
+'''
 
 print()
 print('*****  start section 7 - using pop method ********')
@@ -174,3 +220,20 @@ print()
 
 #to skip the virtual environment we need a gitignore file 
 #make sure nothing is selected when creating new file
+
+
+#dictionaries 
+
+#mylist = ['a','b','c']
+#a list is an object and a dictionary is also an object
+#var = mylist[2] fetches the corresponding value from that location
+#print(var) would show c
+
+#we have key value pairs not index values  with a dictionarie
+#dictionaries have curly brackets
+#has elements
+#key value pairs rather than index locations
+#each element has two parts: key and vlaue
+#key is names value is corresponding phone numbers in example 
+#[katie] would return back her phone number 
+#
