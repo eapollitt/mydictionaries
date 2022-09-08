@@ -156,3 +156,21 @@ print()
 
 
 
+#notes: 
+
+
+#step 1
+#python3 -m venv.venv --> virtual environment
+
+#step 2
+ # source .venv/bin/activate
+
+#step 3 install third party libraries
+#pip install matplotlib #may have to be pip3
+#pip uninstall will remove it 
+
+#step 4 check 3.10.5 '.venv':venv
+    #click on that at the bottom to change it 
+
+#to skip the virtual environment we need a gitignore file 
+#make sure nothing is selected when creating new file
