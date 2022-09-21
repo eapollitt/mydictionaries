@@ -14,8 +14,7 @@ for line in infile:
         else: 
              dictionary[words] = 1
     print(dictionary)
-#for word, times in dictionary.items():
-    #print("%s was found %d time(s)" % (word, times))
+
             
             
                 
