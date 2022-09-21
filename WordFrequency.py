@@ -17,7 +17,7 @@ for line in infile:
 
             
             
-                
+  
         
         #for words in infile: 
             #words = words.strip('\n')
