@@ -8,3 +8,10 @@
 #py -3 -m venv quiz_venv #different py for mac
 #number showing up means  you have a change you need to commit before sending it to github 
 
+echo "info_security.txt" .gitignore
+git rm --cached info_security.txt
+
+/info_security.txt
+/sometext.txt
+
+/retail_space.csv
